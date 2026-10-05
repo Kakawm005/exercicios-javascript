@@ -1,12 +1,9 @@
-/**
- * Manzano - L03D: Ímpares de 0 a 20 (enquanto)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L03D: Ímpares de 0 a 20 (enquanto)
 
-executar(async () => {
-  let i = 0;
-  while (i <= 20) {
-    if (i % 2 !== 0) escrever(i);
-    i++;
+var i = 0;
+while (i <= 20) {
+  if (i % 2 != 0) {
+    console.log(i);
   }
-});
+  i = i + 1;
+}

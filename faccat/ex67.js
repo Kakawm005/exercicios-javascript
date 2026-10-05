@@ -1,14 +1,9 @@
-/**
- * Faccat - Exercício 67: Média dos inteiros entre 15 e 100
- */
-const { escrever, executar } = require('../util');
+// Faccat - Exercício 67: Média dos inteiros entre 15 e 100
 
-executar(async () => {
-  let soma = 0;
-  let qtd = 0;
-  for (let i = 15; i <= 100; i++) {
-    soma += i;
-    qtd++;
-  }
-  escrever(`Média: ${soma / qtd}`);
-});
+var soma = 0;
+var qtd = 0;
+for (var i = 15; i <= 100; i++) {
+  soma = soma + i;
+  qtd = qtd + 1;
+}
+console.log("Média: " + soma / qtd);

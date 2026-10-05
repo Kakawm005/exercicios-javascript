@@ -1,17 +1,11 @@
-/**
- * Manzano - L04D: Grãos de trigo no tabuleiro de xadrez (repita)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L04D: Grãos de trigo no tabuleiro de xadrez (repita)
 
-executar(async () => {
-  let casa = 1;
-  let graos = 1;
-  let total = 0;
-  do {
-    total += graos;
-    graos *= 2;
-    casa++;
-  } while (casa <= 64);
-  escrever(`Total de grãos (real): ${total.toLocaleString('pt-BR')}`);
-  escrever(`Valor exato: ${(2n ** 64n - 1n).toLocaleString('pt-BR')}`);
-});
+var casa = 1;
+var graos = 1;
+var total = 0;
+do {
+  total = total + graos;
+  graos = graos * 2;
+  casa = casa + 1;
+} while (casa <= 64);
+console.log("Total de grãos de trigo: " + total);

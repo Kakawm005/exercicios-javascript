@@ -1,10 +1,7 @@
-/**
- * Manzano - L02B: Módulo de um número
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L02B: Módulo de um número
 
-executar(async () => {
-  let n = await lerNumero('Digite um valor:');
-  if (n < 0) n = n * -1;
-  escrever(`Módulo: ${n}`);
-});
+var n = Number(prompt("Digite um valor:"));
+if (n < 0) {
+  n = n * -1;
+}
+console.log("Módulo: " + n);

@@ -1,18 +1,14 @@
-/**
- * Faccat - Exercício 68: Valor total em estoque e média (quantidade informada)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 68: Valor total em estoque e média (quantidade informada)
 
-executar(async () => {
-  const n = await lerNumero('Número total de mercadorias:');
-  if (n <= 0) {
-    escrever('Informe ao menos uma mercadoria.');
-    return;
+var n = Number(prompt("Número total de mercadorias:"));
+var total = 0;
+if (n > 0) {
+  for (var i = 1; i <= n; i++) {
+    var valor = Number(prompt("Valor da mercadoria " + i + ":"));
+    total = total + valor;
   }
-  let total = 0;
-  for (let i = 1; i <= n; i++) {
-    total += await lerNumero(`Valor da mercadoria ${i}:`);
-  }
-  escrever(`Valor total em estoque: R$ ${total.toFixed(2)}`);
-  escrever(`Média de valor: R$ ${(total / n).toFixed(2)}`);
-});
+  console.log("Valor total em estoque: R$ " + total);
+  console.log("Média de valor: R$ " + total / n);
+} else {
+  console.log("Informe pelo menos uma mercadoria");
+}

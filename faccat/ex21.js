@@ -1,11 +1,12 @@
-/**
- * Faccat - Exercício 21: Duração de um jogo de xadrez em horas inteiras
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 21: Duração de um jogo de xadrez em horas inteiras
 
-executar(async () => {
-  const inicio = await lerNumero('Hora de início (0-23):');
-  const fim = await lerNumero('Hora de fim (0-23):');
-  const duracao = fim >= inicio ? fim - inicio : 24 - inicio + fim; // termina no dia seguinte
-  escrever(`Duração do jogo: ${duracao} hora(s)`);
-});
+var inicio = Number(prompt("Hora de início (0 a 23):"));
+var fim = Number(prompt("Hora de fim (0 a 23):"));
+var duracao;
+if (fim >= inicio) {
+  duracao = fim - inicio;
+} else {
+  // o jogo terminou no dia seguinte
+  duracao = 24 - inicio + fim;
+}
+console.log("Duração do jogo: " + duracao + " hora(s)");

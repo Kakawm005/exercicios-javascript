@@ -1,12 +1,11 @@
-/**
- * Manzano - L02L: Saudação conforme o sexo
- */
-const { lerTexto, escrever, executar } = require('../util');
+// Manzano - L02L: Saudação conforme o sexo
 
-executar(async () => {
-  const nome = await lerTexto('Nome:');
-  const sexo = (await lerTexto('Sexo (M/F):')).toUpperCase();
-  if (sexo === 'M') escrever(`Ilmo Sr. ${nome}`);
-  else if (sexo === 'F') escrever(`Ilma Sra. ${nome}`);
-  else escrever('Sexo inválido. Use M ou F.');
-});
+var nome = prompt("Digite o nome:");
+var sexo = prompt("Digite o sexo (M ou F):");
+if (sexo == "M" || sexo == "m") {
+  console.log("Ilmo Sr. " + nome);
+} else if (sexo == "F" || sexo == "f") {
+  console.log("Ilma Sra. " + nome);
+} else {
+  console.log("Sexo inválido");
+}

@@ -1,17 +1,13 @@
-/**
- * Faccat - Exercício 82: Vetor M = A * X
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 82: Vetor M = A * X
 
-executar(async () => {
-  const A = [];
-  for (let i = 0; i < 10; i++) {
-    A.push(await lerNumero(`A[${i}]:`));
-  }
-  const X = await lerNumero('Valor de X:');
-  const M = [];
-  for (let i = 0; i < 10; i++) {
-    M[i] = A[i] * X;
-  }
-  escrever(`M = [${M.join(', ')}]`);
-});
+var A = [];
+var M = [];
+for (var i = 0; i < 10; i++) {
+  A[i] = Number(prompt("Digite A[" + i + "]:"));
+}
+var X = Number(prompt("Digite o valor de X:"));
+
+for (var i = 0; i < 10; i++) {
+  M[i] = A[i] * X;
+  console.log("M[" + i + "] = " + M[i]);
+}

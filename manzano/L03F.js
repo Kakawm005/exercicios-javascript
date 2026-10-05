@@ -1,17 +1,11 @@
-/**
- * Manzano - L03F: Potência B^E (enquanto, sem operador ^)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L03F: Potência B elevado a E (enquanto, sem usar potência)
 
-executar(async () => {
-  const base = await lerNumero('Base:');
-  const expoente = await lerNumero('Expoente (inteiro):');
-  let resultado = 1;
-  let cont = 0;
-  while (cont < Math.abs(expoente)) {
-    resultado *= base;
-    cont++;
-  }
-  if (expoente < 0) resultado = 1 / resultado;
-  escrever(`${base}^${expoente} = ${resultado}`);
-});
+var base = Number(prompt("Digite a base:"));
+var expoente = Number(prompt("Digite o expoente (inteiro positivo):"));
+var resultado = 1;
+var cont = 1;
+while (cont <= expoente) {
+  resultado = resultado * base;
+  cont = cont + 1;
+}
+console.log(base + " elevado a " + expoente + " = " + resultado);

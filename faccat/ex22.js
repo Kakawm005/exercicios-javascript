@@ -1,15 +1,13 @@
-/**
- * Faccat - Exercício 22: Salário com horas extras (50% de acréscimo)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 22: Salário com horas extras (50% de acréscimo)
 
-executar(async () => {
-  // Jornada semanal de 40h; considerando o mês com 4 semanas, o limite mensal é 160h.
-  const LIMITE_MES = 40 * 4;
-  const horas = await lerNumero('Horas trabalhadas no mês:');
-  const valorHora = await lerNumero('Salário por hora:');
-  const normais = Math.min(horas, LIMITE_MES);
-  const extras = Math.max(0, horas - LIMITE_MES);
-  const total = normais * valorHora + extras * valorHora * 1.5;
-  escrever(`Salário total: R$ ${total.toFixed(2)}`);
-});
+// 40 horas por semana x 4 semanas = 160 horas no mês
+var horas = Number(prompt("Horas trabalhadas no mês:"));
+var valorHora = Number(prompt("Salário por hora:"));
+var salario;
+if (horas > 160) {
+  var extras = horas - 160;
+  salario = 160 * valorHora + extras * valorHora * 1.5;
+} else {
+  salario = horas * valorHora;
+}
+console.log("Salário total: R$ " + salario);

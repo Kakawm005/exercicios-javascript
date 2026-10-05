@@ -1,18 +1,16 @@
-/**
- * Faccat - Exercício 3: Pares de instruções produzem o mesmo resultado?
- */
-const { escrever, executar } = require('../util');
+// Faccat - Exercício 3: Pares de instruções produzem o mesmo resultado?
 
-executar(async () => {
-  const pares = [
-    ['A', '(4/2)+(2/4)', '4/2+2/4'],
-    ['B', '4/(2+2)/4', '4/2+2/4'],
-    ['C', '(4+2)*2-4', '4+2*2-4'],
-  ];
-  const avaliar = (expr) => Function(`return ${expr}`)();
-  for (const [letra, e1, e2] of pares) {
-    const r1 = avaliar(e1);
-    const r2 = avaliar(e2);
-    escrever(`${letra}) ${e1} = ${r1}  |  ${e2} = ${r2}  ->  ${r1 === r2 ? 'MESMO resultado' : 'resultados DIFERENTES'}`);
-  }
-});
+var a1 = (4/2)+(2/4);
+var a2 = 4/2+2/4;
+console.log("A: " + a1 + " e " + a2);
+if (a1 == a2) { console.log("A: MESMO resultado"); } else { console.log("A: resultados DIFERENTES"); }
+
+var b1 = 4/(2+2)/4;
+var b2 = 4/2+2/4;
+console.log("B: " + b1 + " e " + b2);
+if (b1 == b2) { console.log("B: MESMO resultado"); } else { console.log("B: resultados DIFERENTES"); }
+
+var c1 = (4+2)*2-4;
+var c2 = 4+2*2-4;
+console.log("C: " + c1 + " e " + c2);
+if (c1 == c2) { console.log("C: MESMO resultado"); } else { console.log("C: resultados DIFERENTES"); }

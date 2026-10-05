@@ -1,14 +1,12 @@
-/**
- * Faccat - Exercício 17: Média de duas avaliações e situação (aprovação com média >= 6)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 17: Média de duas avaliações e situação (aprovado com média >= 6)
 
-executar(async () => {
-  // A apostila não informa a média mínima; foi adotado 6.
-  const MEDIA_MINIMA = 6;
-  const n1 = await lerNumero('Nota da 1ª avaliação:');
-  const n2 = await lerNumero('Nota da 2ª avaliação:');
-  const media = (n1 + n2) / 2;
-  escrever(media >= MEDIA_MINIMA ? 'Aluno APROVADO' : 'Aluno REPROVADO');
-  escrever(`Média: ${media.toFixed(2)}`);
-});
+// o exercício não diz a média mínima, então usei 6
+var n1 = Number(prompt("Nota da 1ª avaliação:"));
+var n2 = Number(prompt("Nota da 2ª avaliação:"));
+var media = (n1 + n2) / 2;
+if (media >= 6) {
+  console.log("Aluno APROVADO");
+} else {
+  console.log("Aluno REPROVADO");
+}
+console.log("Média: " + media);

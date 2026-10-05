@@ -1,11 +1,6 @@
-/**
- * Manzano - L01C: Volume de uma lata de óleo (π * raio² * altura)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01C: Volume de uma lata de óleo (pi * raio * raio * altura)
 
-executar(async () => {
-  const raio = await lerNumero('Raio:');
-  const altura = await lerNumero('Altura:');
-  const volume = Math.PI * raio ** 2 * altura;
-  escrever(`Volume: ${volume.toFixed(2)}`);
-});
+var raio = Number(prompt("Raio da lata:"));
+var altura = Number(prompt("Altura da lata:"));
+var volume = Math.PI * raio * raio * altura;
+console.log("Volume: " + volume);

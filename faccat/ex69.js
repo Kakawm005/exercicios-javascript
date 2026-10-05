@@ -1,17 +1,14 @@
-/**
- * Faccat - Exercício 69: Valor total e média sem informar a quantidade (MAIS MERCADORIAS)
- */
-const { lerNumero, lerSimNao, escrever, executar } = require('../util');
+// Faccat - Exercício 69: Valor total e média sem informar a quantidade (MAIS MERCADORIAS)
 
-executar(async () => {
-  let total = 0;
-  let qtd = 0;
-  let mais;
-  do {
-    total += await lerNumero(`Valor da mercadoria ${qtd + 1}:`);
-    qtd++;
-    mais = await lerSimNao('MAIS MERCADORIAS (S/N)?');
-  } while (mais);
-  escrever(`Valor total em estoque: R$ ${total.toFixed(2)}`);
-  escrever(`Média de valor: R$ ${(total / qtd).toFixed(2)}`);
-});
+var total = 0;
+var qtd = 0;
+var resposta;
+do {
+  var valor = Number(prompt("Valor da mercadoria:"));
+  total = total + valor;
+  qtd = qtd + 1;
+  resposta = prompt("MAIS MERCADORIAS (S/N)?");
+} while (resposta == "S" || resposta == "s");
+
+console.log("Valor total em estoque: R$ " + total);
+console.log("Média de valor: R$ " + total / qtd);

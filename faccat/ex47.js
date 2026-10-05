@@ -1,14 +1,9 @@
-/**
- * Faccat - Exercício 47: Exercício 45 com mensagem VALOR INVÁLIDO
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 47: Exercício 45 com mensagem VALOR INVÁLIDO
 
-executar(async () => {
-  const a = await lerNumero('Primeiro valor:');
-  let b = await lerNumero('Segundo valor:');
-  while (b === 0) {
-    escrever('VALOR INVÁLIDO');
-    b = await lerNumero('Segundo valor:');
-  }
-  escrever(`${a} / ${b} = ${a / b}`);
-});
+var a = Number(prompt("Primeiro valor:"));
+var b = Number(prompt("Segundo valor:"));
+while (b == 0) {
+  console.log("VALOR INVÁLIDO");
+  b = Number(prompt("Segundo valor:"));
+}
+console.log(a + " / " + b + " = " + a / b);

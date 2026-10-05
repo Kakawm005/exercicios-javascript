@@ -1,14 +1,17 @@
-/**
- * Faccat - Exercício 66: Soma dos inteiros entre dois valores (qualquer ordem)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 66: Soma dos inteiros entre dois valores (qualquer ordem)
 
-executar(async () => {
-  const a = await lerNumero('Primeiro valor:');
-  const b = await lerNumero('Segundo valor:');
-  const inicio = Math.ceil(Math.min(a, b));
-  const fim = Math.floor(Math.max(a, b));
-  let soma = 0;
-  for (let i = inicio; i <= fim; i++) soma += i;
-  escrever(`Soma dos inteiros entre ${a} e ${b}: ${soma}`);
-});
+var a = Number(prompt("Primeiro valor:"));
+var b = Number(prompt("Segundo valor:"));
+var inicio, fim;
+if (a <= b) {
+  inicio = a;
+  fim = b;
+} else {
+  inicio = b;
+  fim = a;
+}
+var soma = 0;
+for (var i = inicio; i <= fim; i++) {
+  soma = soma + i;
+}
+console.log("Soma dos inteiros entre " + a + " e " + b + ": " + soma);

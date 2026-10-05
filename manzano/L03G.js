@@ -1,19 +1,14 @@
-/**
- * Manzano - L03G: Série de Fibonacci até o 15º termo (enquanto)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L03G: Série de Fibonacci até o 15º termo (enquanto)
 
-executar(async () => {
-  let anterior = 1;
-  let atual = 1;
-  let termo = 1;
-  const serie = [];
-  while (termo <= 15) {
-    serie.push(anterior);
-    const proximo = anterior + atual;
-    anterior = atual;
-    atual = proximo;
-    termo++;
-  }
-  escrever(serie.join(', '));
-});
+var anterior = 1;
+var atual = 1;
+var termo = 1;
+var serie = "";
+while (termo <= 15) {
+  serie = serie + anterior + " ";
+  var proximo = anterior + atual;
+  anterior = atual;
+  atual = proximo;
+  termo = termo + 1;
+}
+console.log(serie);

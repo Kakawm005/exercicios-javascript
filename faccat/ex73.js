@@ -1,27 +1,28 @@
-/**
- * Faccat - Exercício 73: Pesquisa de salário e número de filhos dos habitantes
- */
-const { lerNumero, lerSimNao, escrever, executar } = require('../util');
+// Faccat - Exercício 73: Pesquisa de salário e número de filhos dos habitantes
 
-executar(async () => {
-  let habitantes = 0;
-  let somaSalarios = 0;
-  let somaFilhos = 0;
-  let maiorSalario = -Infinity;
-  let abaixo150 = 0;
-  let mais;
-  do {
-    const salario = await lerNumero('Salário do habitante:');
-    const filhos = await lerNumero('Número de filhos:');
-    habitantes++;
-    somaSalarios += salario;
-    somaFilhos += filhos;
-    if (salario > maiorSalario) maiorSalario = salario;
-    if (salario < 150) abaixo150++;
-    mais = await lerSimNao('Mais habitantes (S/N)?');
-  } while (mais);
-  escrever(`Média de salário: R$ ${(somaSalarios / habitantes).toFixed(2)}`);
-  escrever(`Média de filhos: ${(somaFilhos / habitantes).toFixed(2)}`);
-  escrever(`Maior salário: R$ ${maiorSalario.toFixed(2)}`);
-  escrever(`Pessoas com salário menor que R$ 150,00: ${((abaixo150 / habitantes) * 100).toFixed(2)}%`);
-});
+var habitantes = 0;
+var somaSalarios = 0;
+var somaFilhos = 0;
+var maiorSalario = 0;
+var abaixo150 = 0;
+var resposta;
+
+do {
+  var salario = Number(prompt("Salário do habitante:"));
+  var filhos = Number(prompt("Número de filhos:"));
+  habitantes = habitantes + 1;
+  somaSalarios = somaSalarios + salario;
+  somaFilhos = somaFilhos + filhos;
+  if (habitantes == 1 || salario > maiorSalario) {
+    maiorSalario = salario;
+  }
+  if (salario < 150) {
+    abaixo150 = abaixo150 + 1;
+  }
+  resposta = prompt("Tem mais habitantes (S/N)?");
+} while (resposta == "S" || resposta == "s");
+
+console.log("Média de salário: R$ " + somaSalarios / habitantes);
+console.log("Média de filhos: " + somaFilhos / habitantes);
+console.log("Maior salário: R$ " + maiorSalario);
+console.log("Pessoas com salário menor que R$ 150,00: " + abaixo150 / habitantes * 100 + "%");

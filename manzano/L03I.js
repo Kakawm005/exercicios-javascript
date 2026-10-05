@@ -1,15 +1,11 @@
-/**
- * Manzano - L03I: Soma e média de 10 valores (enquanto)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L03I: Soma e média de 10 valores (enquanto)
 
-executar(async () => {
-  let i = 1;
-  let soma = 0;
-  while (i <= 10) {
-    soma += await lerNumero(`Valor ${i}:`);
-    i++;
-  }
-  escrever(`Soma: ${soma}`);
-  escrever(`Média: ${soma / 10}`);
-});
+var i = 1;
+var soma = 0;
+while (i <= 10) {
+  var valor = Number(prompt("Digite o valor " + i + ":"));
+  soma = soma + valor;
+  i = i + 1;
+}
+console.log("Soma: " + soma);
+console.log("Média: " + soma / 10);

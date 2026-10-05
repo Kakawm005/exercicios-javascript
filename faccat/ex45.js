@@ -1,13 +1,8 @@
-/**
- * Faccat - Exercício 45: Divisão de dois valores com ENQUANTO
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 45: Divisão de dois valores com ENQUANTO
 
-executar(async () => {
-  const a = await lerNumero('Primeiro valor:');
-  let b = await lerNumero('Segundo valor (não pode ser zero):');
-  while (b === 0) {
-    b = await lerNumero('Segundo valor (não pode ser zero):');
-  }
-  escrever(`${a} / ${b} = ${a / b}`);
-});
+var a = Number(prompt("Primeiro valor:"));
+var b = Number(prompt("Segundo valor (não pode ser zero):"));
+while (b == 0) {
+  b = Number(prompt("Segundo valor (não pode ser zero):"));
+}
+console.log(a + " / " + b + " = " + a / b);

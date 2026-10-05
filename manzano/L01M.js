@@ -1,11 +1,8 @@
-/**
- * Manzano - L01M: Quadrado da soma de três valores
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01M: Quadrado da soma de três valores
 
-executar(async () => {
-  const a = await lerNumero('A:');
-  const b = await lerNumero('B:');
-  const c = await lerNumero('C:');
-  escrever(`(A + B + C)² = ${(a + b + c) ** 2}`);
-});
+var a = Number(prompt("Digite A:"));
+var b = Number(prompt("Digite B:"));
+var c = Number(prompt("Digite C:"));
+var soma = a + b + c;
+var resultado = soma * soma;
+console.log("Quadrado da soma: " + resultado);

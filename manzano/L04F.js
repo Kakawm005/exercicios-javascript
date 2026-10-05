@@ -1,20 +1,20 @@
-/**
- * Manzano - L04F: Soma, média e total de valores lidos (para ao digitar negativo)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L04F: Soma, média e total de valores lidos (para ao digitar negativo)
 
-executar(async () => {
-  let soma = 0;
-  let qtd = 0;
-  let n;
-  do {
-    n = await lerNumero('Valor positivo (negativo encerra):');
-    if (n >= 0) {
-      soma += n;
-      qtd++;
-    }
-  } while (n >= 0);
-  escrever(`Total de valores lidos: ${qtd}`);
-  escrever(`Somatório: ${soma}`);
-  escrever(qtd > 0 ? `Média: ${soma / qtd}` : 'Média: não calculada (nenhum valor lido).');
-});
+var soma = 0;
+var qtd = 0;
+var n;
+do {
+  n = Number(prompt("Digite um valor positivo (negativo para parar):"));
+  if (n >= 0) {
+    soma = soma + n;
+    qtd = qtd + 1;
+  }
+} while (n >= 0);
+
+console.log("Total de valores lidos: " + qtd);
+console.log("Somatório: " + soma);
+if (qtd > 0) {
+  console.log("Média: " + soma / qtd);
+} else {
+  console.log("Não deu para calcular a média (nenhum valor lido)");
+}

@@ -1,9 +1,8 @@
-/**
- * Manzano - L02I: Par ou ímpar
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L02I: Par ou ímpar
 
-executar(async () => {
-  const n = await lerNumero('Digite um número inteiro:');
-  escrever(n % 2 === 0 ? 'O número é PAR' : 'O número é ÍMPAR');
-});
+var n = Number(prompt("Digite um número inteiro:"));
+if (n % 2 == 0) {
+  console.log("O número é PAR");
+} else {
+  console.log("O número é ÍMPAR");
+}

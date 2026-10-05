@@ -1,14 +1,11 @@
-/**
- * Manzano - L03C: Somatório dos pares de 1 a 500 (enquanto)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L03C: Somatório dos pares de 1 a 500 (enquanto)
 
-executar(async () => {
-  let i = 1;
-  let soma = 0;
-  while (i <= 500) {
-    if (i % 2 === 0) soma += i;
-    i++;
+var i = 1;
+var soma = 0;
+while (i <= 500) {
+  if (i % 2 == 0) {
+    soma = soma + i;
   }
-  escrever(`Somatório dos pares de 1 a 500: ${soma}`);
-});
+  i = i + 1;
+}
+console.log("Somatório dos pares de 1 a 500: " + soma);

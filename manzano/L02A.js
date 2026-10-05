@@ -1,10 +1,9 @@
-/**
- * Manzano - L02A: Diferença do maior pelo menor valor
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L02A: Diferença do maior pelo menor valor
 
-executar(async () => {
-  const a = await lerNumero('Primeiro valor:');
-  const b = await lerNumero('Segundo valor:');
-  escrever(`Diferença (maior - menor): ${Math.abs(a - b)}`);
-});
+var a = Number(prompt("Primeiro valor:"));
+var b = Number(prompt("Segundo valor:"));
+if (a > b) {
+  console.log("Diferença: " + (a - b));
+} else {
+  console.log("Diferença: " + (b - a));
+}

@@ -1,12 +1,8 @@
-/**
- * Faccat - Exercício 61: Média aritmética de 10 valores
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 61: Média aritmética de 10 valores
 
-executar(async () => {
-  let soma = 0;
-  for (let i = 1; i <= 10; i++) {
-    soma += await lerNumero(`Valor ${i}:`);
-  }
-  escrever(`Média: ${soma / 10}`);
-});
+var soma = 0;
+for (var i = 1; i <= 10; i++) {
+  var valor = Number(prompt("Digite o valor " + i + ":"));
+  soma = soma + valor;
+}
+console.log("Média: " + soma / 10);

@@ -1,16 +1,13 @@
-/**
- * Faccat - Exercício 65: Soma dos inteiros entre dois valores (primeiro <= segundo)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 65: Soma dos inteiros entre dois valores (primeiro menor que o segundo)
 
-executar(async () => {
-  const a = await lerNumero('Primeiro valor:');
-  const b = await lerNumero('Segundo valor (maior ou igual ao primeiro):');
-  if (a > b) {
-    escrever('O segundo valor deve ser maior ou igual ao primeiro.');
-    return;
+var a = Number(prompt("Primeiro valor:"));
+var b = Number(prompt("Segundo valor (maior que o primeiro):"));
+var soma = 0;
+if (a <= b) {
+  for (var i = a; i <= b; i++) {
+    soma = soma + i;
   }
-  let soma = 0;
-  for (let i = Math.ceil(a); i <= Math.floor(b); i++) soma += i;
-  escrever(`Soma dos inteiros de ${a} a ${b}: ${soma}`);
-});
+  console.log("Soma dos inteiros de " + a + " até " + b + ": " + soma);
+} else {
+  console.log("O segundo valor precisa ser maior que o primeiro");
+}

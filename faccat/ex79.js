@@ -1,19 +1,18 @@
-/**
- * Faccat - Exercício 79: Média da turma (20 alunos) e quantos ficaram acima da média
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 79: Média da turma (20 alunos) e quantos ficaram acima da média
 
-executar(async () => {
-  const N = 20;
-  const notas = [];
-  for (let i = 1; i <= N; i++) {
-    notas.push(await lerNumero(`Nota do aluno ${i}:`));
+var notas = [];
+var soma = 0;
+for (var i = 0; i < 20; i++) {
+  notas[i] = Number(prompt("Nota do aluno " + (i + 1) + ":"));
+  soma = soma + notas[i];
+}
+var media = soma / 20;
+
+var acima = 0;
+for (var i = 0; i < 20; i++) {
+  if (notas[i] > media) {
+    acima = acima + 1;
   }
-  const media = notas.reduce((s, n) => s + n, 0) / N;
-  let acima = 0;
-  for (const n of notas) {
-    if (n > media) acima++;
-  }
-  escrever(`Média da turma: ${media.toFixed(2)}`);
-  escrever(`Alunos acima da média: ${acima}`);
-});
+}
+console.log("Média da turma: " + media);
+console.log("Alunos acima da média: " + acima);

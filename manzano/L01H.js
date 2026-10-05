@@ -1,11 +1,7 @@
-/**
- * Manzano - L01H: Volume de uma caixa retangular
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01H: Volume de uma caixa retangular
 
-executar(async () => {
-  const comprimento = await lerNumero('Comprimento:');
-  const largura = await lerNumero('Largura:');
-  const altura = await lerNumero('Altura:');
-  escrever(`Volume: ${comprimento * largura * altura}`);
-});
+var comprimento = Number(prompt("Comprimento:"));
+var largura = Number(prompt("Largura:"));
+var altura = Number(prompt("Altura:"));
+var volume = comprimento * largura * altura;
+console.log("Volume: " + volume);

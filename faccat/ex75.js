@@ -1,27 +1,31 @@
-/**
- * Faccat - Exercício 75: Sequências de 1 a 10 com repetição aninhada (versão de exemplo)
- */
-const { escrever, executar } = require('../util');
+// Faccat - Exercício 75: Sequências de 1 a 10 com repetição aninhada (versão de exemplo)
 
-executar(async () => {
-  // ATENÇÃO: as sequências do enunciado não constam no PDF recebido.
-  // Abaixo, três padrões clássicos com laços aninhados; ajuste conforme a apostila.
-  escrever('Sequência 1 (triângulo crescente):');
-  for (let i = 1; i <= 10; i++) {
-    let linha = '';
-    for (let j = 1; j <= i; j++) linha += `${j} `;
-    escrever(linha.trim());
+// atenção: as sequências do enunciado não estão no PDF.
+// Fiz três exemplos com um laço dentro do outro, é só ajustar conforme a apostila.
+
+console.log("Sequência 1:");
+for (var i = 1; i <= 10; i++) {
+  var linha = "";
+  for (var j = 1; j <= i; j++) {
+    linha = linha + j + " ";
   }
-  escrever('\nSequência 2 (triângulo decrescente):');
-  for (let i = 10; i >= 1; i--) {
-    let linha = '';
-    for (let j = 1; j <= i; j++) linha += `${j} `;
-    escrever(linha.trim());
+  console.log(linha);
+}
+
+console.log("Sequência 2:");
+for (var i = 10; i >= 1; i--) {
+  var linha = "";
+  for (var j = 1; j <= i; j++) {
+    linha = linha + j + " ";
   }
-  escrever('\nSequência 3 (cada número repetido por ele mesmo):');
-  for (let i = 1; i <= 10; i++) {
-    let linha = '';
-    for (let j = 1; j <= i; j++) linha += `${i} `;
-    escrever(linha.trim());
+  console.log(linha);
+}
+
+console.log("Sequência 3:");
+for (var i = 1; i <= 10; i++) {
+  var linha = "";
+  for (var j = 1; j <= i; j++) {
+    linha = linha + i + " ";
   }
-});
+  console.log(linha);
+}

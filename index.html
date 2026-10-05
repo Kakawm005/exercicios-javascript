@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios de Lógica de Programação</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 16px; }
+    select, button { font-size: 16px; padding: 6px; margin-top: 10px; }
+    select { width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>Exercícios de Lógica de Programação</h1>
+  <p>Escolha o exercício e clique em Executar. As perguntas aparecem em caixinhas
+  e os resultados aparecem na página.</p>
+  <select id="lista">
+      <optgroup label="Faccat (PDF)">
+        <option value="faccat/ex03.js">Faccat - Exercício 3: Pares de instruções produzem o mesmo resultado?</option>
+        <option value="faccat/ex04.js">Faccat - Exercício 4: Reescrever com o mínimo de parênteses</option>
+        <option value="faccat/ex05.js">Faccat - Exercício 5: Ler um valor e escrever o antecessor</option>
+        <option value="faccat/ex06.js">Faccat - Exercício 6: Área de um retângulo</option>
+        <option value="faccat/ex07.js">Faccat - Exercício 7: Idade em anos, meses e dias convertida para dias</option>
+        <option value="faccat/ex08.js">Faccat - Exercício 8: Percentual de votos brancos, nulos e válidos</option>
+        <option value="faccat/ex09.js">Faccat - Exercício 9: Novo salário com reajuste percentual</option>
+        <option value="faccat/ex10.js">Faccat - Exercício 10: Custo final de um carro ao consumidor</option>
+        <option value="faccat/ex11.js">Faccat - Exercício 11: Salário final do vendedor de carros usados</option>
+        <option value="faccat/ex12.js">Faccat - Exercício 12: Fahrenheit para Celsius</option>
+        <option value="faccat/ex13.js">Faccat - Exercício 13: Média ponderada (pesos 2, 3 e 5)</option>
+        <option value="faccat/ex16.js">Faccat - Exercício 16: Custo das maçãs (R$ 1,30 a unidade; R$ 1,00 a partir de 12)</option>
+        <option value="faccat/ex17.js">Faccat - Exercício 17: Média de duas avaliações e situação (aprovado com média >= 6)</option>
+        <option value="faccat/ex18.js">Faccat - Exercício 18: Pode votar este ano? (a partir de 16 anos)</option>
+        <option value="faccat/ex21.js">Faccat - Exercício 21: Duração de um jogo de xadrez em horas inteiras</option>
+        <option value="faccat/ex22.js">Faccat - Exercício 22: Salário com horas extras (50% de acréscimo)</option>
+        <option value="faccat/ex23.js">Faccat - Exercício 23: Peso ideal (masculino: 72,7*h - 58; feminino: 62,1*h - 44,7)</option>
+        <option value="faccat/ex24.js">Faccat - Exercício 24: Salário com comissão de 3% até R$ 1.500 e 5% sobre o excedente</option>
+        <option value="faccat/ex25.js">Faccat - Exercício 25: Saldo atual de conta bancária</option>
+        <option value="faccat/ex26.js">Faccat - Exercício 26: Controle de estoque médio</option>
+        <option value="faccat/ex29.js">Faccat - Exercício 29: Soma dos 2 maiores entre 3 valores</option>
+        <option value="faccat/ex31.js">Faccat - Exercício 31: Três lados formam um triângulo?</option>
+        <option value="faccat/ex34.js">Faccat - Exercício 34: Teste de mesa de z = (x*y) + 5</option>
+        <option value="faccat/ex35.js">Faccat - Exercício 35: Posto de combustível: valor a pagar com desconto por quantidade</option>
+        <option value="faccat/ex36.js">Faccat - Exercício 36: Soma e produto de idades de homens e mulheres</option>
+        <option value="faccat/ex37.js">Faccat - Exercício 37: Fruteira: morangos e maçãs com desconto de 10%</option>
+        <option value="faccat/ex40.js">Faccat - Exercício 40: Total, desconto e total a pagar (2%, 3% ou 5% por quantidade)</option>
+        <option value="faccat/ex41.js">Faccat - Exercício 41: Média de aproveitamento e conceito</option>
+        <option value="faccat/ex42.js">Faccat - Exercício 42: Idade, tempo de trabalho e aposentadoria</option>
+        <option value="faccat/ex44.js">Faccat - Exercício 44: Divisão de dois valores com REPITA (segundo valor diferente de zero)</option>
+        <option value="faccat/ex45.js">Faccat - Exercício 45: Divisão de dois valores com ENQUANTO</option>
+        <option value="faccat/ex46.js">Faccat - Exercício 46: Exercício 44 com mensagem VALOR INVÁLIDO</option>
+        <option value="faccat/ex47.js">Faccat - Exercício 47: Exercício 45 com mensagem VALOR INVÁLIDO</option>
+        <option value="faccat/ex48.js">Faccat - Exercício 48: Média de duas notas aceitando apenas valores entre 0 e 10</option>
+        <option value="faccat/ex49.js">Faccat - Exercício 49: Exercício 48 com NOVO CÁLCULO (S/N)?</option>
+        <option value="faccat/ex55.js">Faccat - Exercício 55: Tabuada do 8, de 1 a 10</option>
+        <option value="faccat/ex56.js">Faccat - Exercício 56: Tabuada de 1 a 10 do valor lido (entre 1 e 10)</option>
+        <option value="faccat/ex61.js">Faccat - Exercício 61: Média aritmética de 10 valores</option>
+        <option value="faccat/ex62.js">Faccat - Exercício 62: Média das notas de uma turma</option>
+        <option value="faccat/ex63.js">Faccat - Exercício 63: Soma de 10 números</option>
+        <option value="faccat/ex64.js">Faccat - Exercício 64: Soma dos números lidos com valor inferior a 40</option>
+        <option value="faccat/ex65.js">Faccat - Exercício 65: Soma dos inteiros entre dois valores (primeiro menor que o segundo)</option>
+        <option value="faccat/ex66.js">Faccat - Exercício 66: Soma dos inteiros entre dois valores (qualquer ordem)</option>
+        <option value="faccat/ex67.js">Faccat - Exercício 67: Média dos inteiros entre 15 e 100</option>
+        <option value="faccat/ex68.js">Faccat - Exercício 68: Valor total em estoque e média (quantidade informada)</option>
+        <option value="faccat/ex69.js">Faccat - Exercício 69: Valor total e média sem informar a quantidade (MAIS MERCADORIAS)</option>
+        <option value="faccat/ex71.js">Faccat - Exercício 71: Maior número e média de uma quantidade de números</option>
+        <option value="faccat/ex72.js">Faccat - Exercício 72: Maior preço e média de preços de 15 produtos</option>
+        <option value="faccat/ex73.js">Faccat - Exercício 73: Pesquisa de salário e número de filhos dos habitantes</option>
+        <option value="faccat/ex74.js">Faccat - Exercício 74: Tabuada de 1 a 10 para os números de 1 a 10</option>
+        <option value="faccat/ex75.js">Faccat - Exercício 75: Sequências de 1 a 10 com repetição aninhada (versão de exemplo)</option>
+        <option value="faccat/ex79.js">Faccat - Exercício 79: Média da turma (20 alunos) e quantos ficaram acima da média</option>
+        <option value="faccat/ex82.js">Faccat - Exercício 82: Vetor M = A * X</option>
+        <option value="faccat/ex84.js">Faccat - Exercício 84: Vetor Soma = A + B (posição a posição)</option>
+        <option value="faccat/ex85.js">Faccat - Exercício 85: Temperaturas do ano: menor, maior, média e dias abaixo da média</option>
+      </optgroup>
+      <optgroup label="Manzano (TXT)">
+        <option value="manzano/L01A.js">Manzano - L01A: Celsius para Fahrenheit</option>
+        <option value="manzano/L01B.js">Manzano - L01B: Fahrenheit para Celsius</option>
+        <option value="manzano/L01C.js">Manzano - L01C: Volume de uma lata de óleo (pi * raio * raio * altura)</option>
+        <option value="manzano/L01D.js">Manzano - L01D: Litros de combustível gastos em uma viagem (12 km por litro)</option>
+        <option value="manzano/L01E.js">Manzano - L01E: Valor de uma prestação em atraso</option>
+        <option value="manzano/L01F.js">Manzano - L01F: Troca dos valores de A e B</option>
+        <option value="manzano/L01G.js">Manzano - L01G: Adição e multiplicação aos pares de quatro inteiros</option>
+        <option value="manzano/L01H.js">Manzano - L01H: Volume de uma caixa retangular</option>
+        <option value="manzano/L01I.js">Manzano - L01I: Quadrado da diferença entre dois inteiros</option>
+        <option value="manzano/L01J.js">Manzano - L01J: Conversão de dólar para real</option>
+        <option value="manzano/L01K.js">Manzano - L01K: Conversão de real para dólar</option>
+        <option value="manzano/L01L.js">Manzano - L01L: Soma dos quadrados de três valores</option>
+        <option value="manzano/L01M.js">Manzano - L01M: Quadrado da soma de três valores</option>
+        <option value="manzano/L01_COMPL_A.js">Manzano - L01_COMPL_A: Produto (A*C) e soma (B+D) de quatro inteiros</option>
+        <option value="manzano/L01_COMPL_B.js">Manzano - L01_COMPL_B: Novo salário com percentual de reajuste</option>
+        <option value="manzano/L01_COMPL_C.js">Manzano - L01_COMPL_C: Apuração de eleição sindical (candidatos A, B e C)</option>
+        <option value="manzano/L02A.js">Manzano - L02A: Diferença do maior pelo menor valor</option>
+        <option value="manzano/L02B.js">Manzano - L02B: Módulo de um número</option>
+        <option value="manzano/L02C.js">Manzano - L02C: Média de quatro notas (aprovado se média >= 5)</option>
+        <option value="manzano/L02D.js">Manzano - L02D: Média de quatro notas com exame</option>
+        <option value="manzano/L02E.js">Manzano - L02E: Equação do segundo grau</option>
+        <option value="manzano/L02F.js">Manzano - L02F: Três valores em ordem crescente</option>
+        <option value="manzano/L02G.js">Manzano - L02G: Números divisíveis por 2 e 3 (entre quatro lidos)</option>
+        <option value="manzano/L02H.js">Manzano - L02H: Maior e menor de cinco valores</option>
+        <option value="manzano/L02I.js">Manzano - L02I: Par ou ímpar</option>
+        <option value="manzano/L02J.js">Manzano - L02J: Valor na faixa de 1 a 9</option>
+        <option value="manzano/L02K.js">Manzano - L02K: Apresentar o valor se não for maior que três</option>
+        <option value="manzano/L02L.js">Manzano - L02L: Saudação conforme o sexo</option>
+        <option value="manzano/L03A.js">Manzano - L03A: Tabuada de 1 a 10 de um número (enquanto)</option>
+        <option value="manzano/L03B.js">Manzano - L03B: Soma dos cem primeiros inteiros (enquanto)</option>
+        <option value="manzano/L03C.js">Manzano - L03C: Somatório dos pares de 1 a 500 (enquanto)</option>
+        <option value="manzano/L03D.js">Manzano - L03D: Ímpares de 0 a 20 (enquanto)</option>
+        <option value="manzano/L03E.js">Manzano - L03E: Potências de 3 do expoente 0 ao 15 (enquanto, sem usar potência)</option>
+        <option value="manzano/L03F.js">Manzano - L03F: Potência B elevado a E (enquanto, sem usar potência)</option>
+        <option value="manzano/L03G.js">Manzano - L03G: Série de Fibonacci até o 15º termo (enquanto)</option>
+        <option value="manzano/L03H.js">Manzano - L03H: Tabela Celsius x Fahrenheit de 10 em 10 graus (enquanto)</option>
+        <option value="manzano/L03I.js">Manzano - L03I: Soma e média de 10 valores (enquanto)</option>
+        <option value="manzano/L03J.js">Manzano - L03J: Soma e média dos pares de 50 a 70 (enquanto)</option>
+        <option value="manzano/L03K.js">Manzano - L03K: Área total de uma residência (enquanto)</option>
+        <option value="manzano/L03L.js">Manzano - L03L: Maior e menor valor até um negativo ser informado (enquanto)</option>
+        <option value="manzano/L04A.js">Manzano - L04A: Quadrados dos inteiros de 15 a 200 (repita)</option>
+        <option value="manzano/L04B.js">Manzano - L04B: Somatório dos pares de 1 a 500 (repita)</option>
+        <option value="manzano/L04C.js">Manzano - L04C: Números divisíveis por 4 menores que 200 (repita)</option>
+        <option value="manzano/L04D.js">Manzano - L04D: Grãos de trigo no tabuleiro de xadrez (repita)</option>
+        <option value="manzano/L04E.js">Manzano - L04E: Somatório do fatorial de 15 valores (repita)</option>
+        <option value="manzano/L04F.js">Manzano - L04F: Soma, média e total de valores lidos (para ao digitar negativo)</option>
+        <option value="manzano/L04G.js">Manzano - L04G: Fatorial dos ímpares de 1 a 10 (repita)</option>
+        <option value="manzano/L04H.js">Manzano - L04H: Área total de uma residência (repita)</option>
+        <option value="manzano/L04I.js">Manzano - L04I: Maior e menor valor até um negativo ser informado (repita)</option>
+        <option value="manzano/L04J.js">Manzano - L04J: Divisão inteira por subtrações sucessivas (sem usar DIV)</option>
+        <option value="manzano/L05A.js">Manzano - L05A: Quadrados dos inteiros de 15 a 200 (para)</option>
+        <option value="manzano/L05B.js">Manzano - L05B: Tabuada de 1 a 10 de um número (para)</option>
+        <option value="manzano/L05C.js">Manzano - L05C: Soma dos cem primeiros inteiros (para)</option>
+        <option value="manzano/L05D.js">Manzano - L05D: Somatório dos pares de 1 a 500 (para)</option>
+        <option value="manzano/L05E.js">Manzano - L05E: Ímpares de 0 a 20 (para)</option>
+        <option value="manzano/L05F.js">Manzano - L05F: Números divisíveis por 4 menores que 200 (para)</option>
+        <option value="manzano/L05G.js">Manzano - L05G: Potências de 3 do expoente 0 ao 15 (para, sem usar potência)</option>
+        <option value="manzano/L05H.js">Manzano - L05H: Potência B elevado a E (para, sem usar potência)</option>
+        <option value="manzano/L05I.js">Manzano - L05I: Série de Fibonacci até o 15º termo (para)</option>
+        <option value="manzano/L05J.js">Manzano - L05J: Tabela Celsius x Fahrenheit de 10 em 10 graus (para)</option>
+        <option value="manzano/L05K.js">Manzano - L05K: Fatorial dos ímpares de 1 a 10 (para)</option>
+      </optgroup>
+  </select>
+  <br>
+  <button onclick="executar()">Executar</button>
+
+  <script>
+    function executar() {
+      var arquivo = document.getElementById("lista").value;
+      window.location.href = "executar.html?arquivo=" + arquivo;
+    }
+  </script>
+</body>
+</html>

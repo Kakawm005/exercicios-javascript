@@ -1,22 +1,22 @@
-/**
- * Faccat - Exercício 49: Exercício 48 com NOVO CÁLCULO (S/N)?
- */
-const { lerNumero, lerSimNao, escrever, executar } = require('../util');
+// Faccat - Exercício 49: Exercício 48 com NOVO CÁLCULO (S/N)?
 
-executar(async () => {
-  async function lerNota(msg) {
-    let nota;
-    do {
-      nota = await lerNumero(msg);
-      if (nota < 0 || nota > 10) escrever('Nota inválida. Use valores de 0 a 10.');
-    } while (nota < 0 || nota > 10);
-    return nota;
-  }
-  let novo;
+var n1, n2, resposta;
+
+do {
   do {
-    const n1 = await lerNota('Nota da 1ª avaliação:');
-    const n2 = await lerNota('Nota da 2ª avaliação:');
-    escrever(`Média: ${((n1 + n2) / 2).toFixed(2)}`);
-    novo = await lerSimNao('NOVO CÁLCULO (S/N)?');
-  } while (novo);
-});
+    n1 = Number(prompt("Nota da 1ª avaliação (0 a 10):"));
+    if (n1 < 0 || n1 > 10) {
+      console.log("Nota inválida, use valores de 0 a 10");
+    }
+  } while (n1 < 0 || n1 > 10);
+
+  do {
+    n2 = Number(prompt("Nota da 2ª avaliação (0 a 10):"));
+    if (n2 < 0 || n2 > 10) {
+      console.log("Nota inválida, use valores de 0 a 10");
+    }
+  } while (n2 < 0 || n2 > 10);
+
+  console.log("Média: " + (n1 + n2) / 2);
+  resposta = prompt("NOVO CÁLCULO (S/N)?");
+} while (resposta == "S" || resposta == "s");

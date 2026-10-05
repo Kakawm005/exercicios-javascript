@@ -1,19 +1,29 @@
-/**
- * Manzano - L04I: Maior e menor valor até um negativo ser informado (repita)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L04I: Maior e menor valor até um negativo ser informado (repita)
 
-executar(async () => {
-  let maior = null;
-  let menor = null;
-  let n;
-  do {
-    n = await lerNumero('Valor inteiro positivo (negativo encerra):');
-    if (n >= 0) {
-      if (maior === null || n > maior) maior = n;
-      if (menor === null || n < menor) menor = n;
+var maior = 0;
+var menor = 0;
+var cont = 0;
+var n;
+do {
+  n = Number(prompt("Digite um valor positivo (negativo para parar):"));
+  if (n >= 0) {
+    if (cont == 0) {
+      maior = n;
+      menor = n;
     }
-  } while (n >= 0);
-  if (maior === null) escrever('Nenhum valor válido foi informado.');
-  else escrever(`Maior: ${maior} | Menor: ${menor}`);
-});
+    if (n > maior) {
+      maior = n;
+    }
+    if (n < menor) {
+      menor = n;
+    }
+    cont = cont + 1;
+  }
+} while (n >= 0);
+
+if (cont == 0) {
+  console.log("Nenhum valor válido foi informado");
+} else {
+  console.log("Maior: " + maior);
+  console.log("Menor: " + menor);
+}

@@ -1,13 +1,8 @@
-/**
- * Manzano - L01F: Troca dos valores de A e B
- */
-const { lerTexto, escrever, executar } = require('../util');
+// Manzano - L01F: Troca dos valores de A e B
 
-executar(async () => {
-  let a = await lerTexto('Valor de A:');
-  let b = await lerTexto('Valor de B:');
-  const auxiliar = a;
-  a = b;
-  b = auxiliar;
-  escrever(`Após a troca: A = ${a} e B = ${b}`);
-});
+var a = prompt("Digite o valor de A:");
+var b = prompt("Digite o valor de B:");
+var auxiliar = a;
+a = b;
+b = auxiliar;
+console.log("Depois da troca: A = " + a + " e B = " + b);

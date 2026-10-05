@@ -1,12 +1,9 @@
-/**
- * Manzano - L05D: Somatório dos pares de 1 a 500 (para)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L05D: Somatório dos pares de 1 a 500 (para)
 
-executar(async () => {
-  let soma = 0;
-  for (let i = 1; i <= 500; i++) {
-    if (i % 2 === 0) soma += i;
+var soma = 0;
+for (var i = 1; i <= 500; i++) {
+  if (i % 2 == 0) {
+    soma = soma + i;
   }
-  escrever(`Somatório dos pares de 1 a 500: ${soma}`);
-});
+}
+console.log("Somatório dos pares de 1 a 500: " + soma);

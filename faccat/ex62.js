@@ -1,17 +1,13 @@
-/**
- * Faccat - Exercício 62: Média das notas de uma turma
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 62: Média das notas de uma turma
 
-executar(async () => {
-  const alunos = await lerNumero('Número de alunos:');
-  if (alunos <= 0) {
-    escrever('O número de alunos deve ser maior que zero.');
-    return;
+var alunos = Number(prompt("Número de alunos da turma:"));
+var soma = 0;
+if (alunos > 0) {
+  for (var i = 1; i <= alunos; i++) {
+    var nota = Number(prompt("Nota do aluno " + i + ":"));
+    soma = soma + nota;
   }
-  let soma = 0;
-  for (let i = 1; i <= alunos; i++) {
-    soma += await lerNumero(`Nota do aluno ${i}:`);
-  }
-  escrever(`Média da turma: ${(soma / alunos).toFixed(2)}`);
-});
+  console.log("Média da turma: " + soma / alunos);
+} else {
+  console.log("O número de alunos precisa ser maior que zero");
+}

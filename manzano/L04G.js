@@ -1,18 +1,13 @@
-/**
- * Manzano - L04G: Fatorial dos ímpares de 1 a 10 (repita)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L04G: Fatorial dos ímpares de 1 a 10 (repita)
 
-executar(async () => {
-  let n = 1;
-  do {
-    let fat = 1;
-    let k = 2;
-    while (k <= n) {
-      fat *= k;
-      k++;
-    }
-    escrever(`${n}! = ${fat}`);
-    n += 2;
-  } while (n <= 10);
-});
+var n = 1;
+do {
+  var fatorial = 1;
+  var k = 2;
+  while (k <= n) {
+    fatorial = fatorial * k;
+    k = k + 1;
+  }
+  console.log("Fatorial de " + n + " = " + fatorial);
+  n = n + 2;
+} while (n <= 10);

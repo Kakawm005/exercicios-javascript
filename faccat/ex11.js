@@ -1,13 +1,8 @@
-/**
- * Faccat - Exercício 11: Salário final do vendedor de carros usados
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 11: Salário final do vendedor de carros usados
 
-executar(async () => {
-  const carros = await lerNumero('Número de carros vendidos:');
-  const totalVendas = await lerNumero('Valor total das vendas:');
-  const fixo = await lerNumero('Salário fixo:');
-  const porCarro = await lerNumero('Valor recebido por carro vendido:');
-  const salario = fixo + carros * porCarro + totalVendas * 0.05;
-  escrever(`Salário final: R$ ${salario.toFixed(2)}`);
-});
+var carros = Number(prompt("Número de carros vendidos:"));
+var totalVendas = Number(prompt("Valor total das vendas:"));
+var fixo = Number(prompt("Salário fixo:"));
+var porCarro = Number(prompt("Valor recebido por carro vendido:"));
+var salario = fixo + carros * porCarro + totalVendas * 5 / 100;
+console.log("Salário final: R$ " + salario);

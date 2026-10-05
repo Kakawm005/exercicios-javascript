@@ -1,10 +1,6 @@
-/**
- * Faccat - Exercício 6: Área de um retângulo
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 6: Área de um retângulo
 
-executar(async () => {
-  const base = await lerNumero('Base do retângulo:');
-  const altura = await lerNumero('Altura do retângulo:');
-  escrever(`Área: ${base * altura}`);
-});
+var base = Number(prompt("Digite a base do retângulo:"));
+var altura = Number(prompt("Digite a altura do retângulo:"));
+var area = base * altura;
+console.log("Área: " + area);

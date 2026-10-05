@@ -1,10 +1,5 @@
-/**
- * Manzano - L05A: Quadrados dos inteiros de 15 a 200 (para)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L05A: Quadrados dos inteiros de 15 a 200 (para)
 
-executar(async () => {
-  for (let i = 15; i <= 200; i++) {
-    escrever(`${i}² = ${i * i}`);
-  }
-});
+for (var i = 15; i <= 200; i++) {
+  console.log(i + " ao quadrado = " + i * i);
+}

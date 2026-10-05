@@ -1,13 +1,12 @@
-/**
- * Faccat - Exercício 26: Controle de estoque médio
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 26: Controle de estoque médio
 
-executar(async () => {
-  const atual = await lerNumero('Quantidade atual em estoque:');
-  const maxima = await lerNumero('Quantidade máxima:');
-  const minima = await lerNumero('Quantidade mínima:');
-  const media = (maxima + minima) / 2;
-  escrever(`Quantidade média: ${media}`);
-  escrever(atual < media ? 'Deve efetuar compra.' : 'Não é necessário efetuar compra.');
-});
+var atual = Number(prompt("Quantidade atual em estoque:"));
+var maxima = Number(prompt("Quantidade máxima:"));
+var minima = Number(prompt("Quantidade mínima:"));
+var media = (maxima + minima) / 2;
+console.log("Quantidade média: " + media);
+if (atual < media) {
+  console.log("Deve efetuar a compra");
+} else {
+  console.log("Não precisa comprar");
+}

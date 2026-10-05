@@ -1,10 +1,6 @@
-/**
- * Manzano - L01J: Conversão de dólar para real
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01J: Conversão de dólar para real
 
-executar(async () => {
-  const cotacao = await lerNumero('Cotação do dólar (R$):');
-  const dolares = await lerNumero('Quantidade de dólares:');
-  escrever(`US$ ${dolares} = R$ ${(dolares * cotacao).toFixed(2)}`);
-});
+var cotacao = Number(prompt("Cotação do dólar (em reais):"));
+var dolares = Number(prompt("Quantidade de dólares:"));
+var reais = dolares * cotacao;
+console.log("US$ " + dolares + " = R$ " + reais);

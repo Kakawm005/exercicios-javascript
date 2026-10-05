@@ -1,19 +1,14 @@
-/**
- * Faccat - Exercício 8: Percentual de votos brancos, nulos e válidos
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 8: Percentual de votos brancos, nulos e válidos
 
-executar(async () => {
-  const total = await lerNumero('Total de eleitores:');
-  const brancos = await lerNumero('Votos brancos:');
-  const nulos = await lerNumero('Votos nulos:');
-  const validos = await lerNumero('Votos válidos:');
-  if (total <= 0) {
-    escrever('O total de eleitores deve ser maior que zero.');
-    return;
-  }
-  const pct = (v) => ((v / total) * 100).toFixed(2);
-  escrever(`Brancos: ${pct(brancos)}%`);
-  escrever(`Nulos: ${pct(nulos)}%`);
-  escrever(`Válidos: ${pct(validos)}%`);
-});
+var total = Number(prompt("Total de eleitores:"));
+var brancos = Number(prompt("Votos brancos:"));
+var nulos = Number(prompt("Votos nulos:"));
+var validos = Number(prompt("Votos válidos:"));
+
+if (total > 0) {
+  console.log("Brancos: " + brancos / total * 100 + "%");
+  console.log("Nulos: " + nulos / total * 100 + "%");
+  console.log("Válidos: " + validos / total * 100 + "%");
+} else {
+  console.log("O total de eleitores precisa ser maior que zero");
+}

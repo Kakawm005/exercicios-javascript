@@ -1,14 +1,20 @@
-/**
- * Faccat - Exercício 34: Teste de mesa de z = (x*y) + 5
- */
-const { escrever, executar } = require('../util');
+// Faccat - Exercício 34: Teste de mesa de z = (x*y) + 5
 
-executar(async () => {
-  // Os valores do enunciado não constam no PDF; abaixo, alguns casos de exemplo.
-  const casos = [[2, 3], [4, 5], [0, 7], [-1, 6]];
-  escrever('x\ty\tz = (x*y)+5');
-  for (const [x, y] of casos) {
-    const z = x * y + 5;
-    escrever(`${x}\t${y}\t${z}`);
-  }
-});
+// os valores do enunciado não estão no PDF, então usei alguns de exemplo
+var x, y, z;
+
+x = 2; y = 3;
+z = (x * y) + 5;
+console.log("x = " + x + "  y = " + y + "  z = " + z);
+
+x = 4; y = 5;
+z = (x * y) + 5;
+console.log("x = " + x + "  y = " + y + "  z = " + z);
+
+x = 0; y = 7;
+z = (x * y) + 5;
+console.log("x = " + x + "  y = " + y + "  z = " + z);
+
+x = -1; y = 6;
+z = (x * y) + 5;
+console.log("x = " + x + "  y = " + y + "  z = " + z);

@@ -1,12 +1,9 @@
-/**
- * Manzano - L05K: Fatorial dos ímpares de 1 a 10 (para)
- */
-const { escrever, executar } = require('../util');
+// Manzano - L05K: Fatorial dos ímpares de 1 a 10 (para)
 
-executar(async () => {
-  for (let n = 1; n <= 10; n += 2) {
-    let fat = 1;
-    for (let k = 2; k <= n; k++) fat *= k;
-    escrever(`${n}! = ${fat}`);
+for (var n = 1; n <= 10; n = n + 2) {
+  var fatorial = 1;
+  for (var k = 2; k <= n; k++) {
+    fatorial = fatorial * k;
   }
-});
+  console.log("Fatorial de " + n + " = " + fatorial);
+}

@@ -1,12 +1,11 @@
-/**
- * Faccat - Exercício 24: Salário com comissão de 3% até R$ 1.500 e 5% sobre o excedente
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 24: Salário com comissão de 3% até R$ 1.500 e 5% sobre o excedente
 
-executar(async () => {
-  const fixo = await lerNumero('Salário fixo:');
-  const vendas = await lerNumero('Valor das vendas:');
-  const LIMITE = 1500;
-  const comissao = vendas <= LIMITE ? vendas * 0.03 : LIMITE * 0.03 + (vendas - LIMITE) * 0.05;
-  escrever(`Salário total: R$ ${(fixo + comissao).toFixed(2)}`);
-});
+var fixo = Number(prompt("Salário fixo:"));
+var vendas = Number(prompt("Valor das vendas:"));
+var comissao;
+if (vendas <= 1500) {
+  comissao = vendas * 3 / 100;
+} else {
+  comissao = 1500 * 3 / 100 + (vendas - 1500) * 5 / 100;
+}
+console.log("Salário total: R$ " + (fixo + comissao));

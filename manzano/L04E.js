@@ -1,22 +1,17 @@
-/**
- * Manzano - L04E: Somatório do fatorial de 15 valores (repita)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L04E: Somatório do fatorial de 15 valores (repita)
 
-executar(async () => {
-  let i = 1;
-  let somaFatoriais = 0;
-  do {
-    const n = await lerNumero(`Valor ${i} (inteiro >= 0):`);
-    let fat = 1;
-    let k = 2;
-    while (k <= n) {
-      fat *= k;
-      k++;
-    }
-    escrever(`${n}! = ${fat}`);
-    somaFatoriais += fat;
-    i++;
-  } while (i <= 15);
-  escrever(`Somatório dos fatoriais: ${somaFatoriais}`);
-});
+var i = 1;
+var somaFatoriais = 0;
+do {
+  var n = Number(prompt("Digite o valor " + i + ":"));
+  var fatorial = 1;
+  var k = 2;
+  while (k <= n) {
+    fatorial = fatorial * k;
+    k = k + 1;
+  }
+  console.log("Fatorial de " + n + " = " + fatorial);
+  somaFatoriais = somaFatoriais + fatorial;
+  i = i + 1;
+} while (i <= 15);
+console.log("Somatório dos fatoriais: " + somaFatoriais);

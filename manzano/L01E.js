@@ -1,12 +1,7 @@
-/**
- * Manzano - L01E: Valor de uma prestação em atraso
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01E: Valor de uma prestação em atraso
 
-executar(async () => {
-  const valor = await lerNumero('Valor da prestação:');
-  const taxa = await lerNumero('Taxa de juros (% ao período):');
-  const tempo = await lerNumero('Tempo de atraso (períodos):');
-  const prestacao = valor + ((valor * taxa) / 100) * tempo;
-  escrever(`Valor da prestação em atraso: R$ ${prestacao.toFixed(2)}`);
-});
+var valor = Number(prompt("Valor da prestação:"));
+var taxa = Number(prompt("Taxa de juros (%):"));
+var tempo = Number(prompt("Tempo de atraso:"));
+var prestacao = valor + (valor * taxa / 100) * tempo;
+console.log("Valor da prestação em atraso: R$ " + prestacao);

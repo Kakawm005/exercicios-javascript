@@ -1,13 +1,8 @@
-/**
- * Manzano - L03A: Tabuada de 1 a 10 de um número (enquanto)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L03A: Tabuada de 1 a 10 de um número (enquanto)
 
-executar(async () => {
-  const n = await lerNumero('Número da tabuada:');
-  let i = 1;
-  while (i <= 10) {
-    escrever(`${n} x ${i} = ${n * i}`);
-    i++;
-  }
-});
+var n = Number(prompt("Digite o número da tabuada:"));
+var i = 1;
+while (i <= 10) {
+  console.log(n + " x " + i + " = " + n * i);
+  i = i + 1;
+}

@@ -1,11 +1,6 @@
-/**
- * Faccat - Exercício 9: Novo salário com reajuste percentual
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 9: Novo salário com reajuste percentual
 
-executar(async () => {
-  const salario = await lerNumero('Salário mensal atual:');
-  const percentual = await lerNumero('Percentual de reajuste (%):');
-  const novo = salario + (salario * percentual) / 100;
-  escrever(`Novo salário: R$ ${novo.toFixed(2)}`);
-});
+var salario = Number(prompt("Salário atual:"));
+var percentual = Number(prompt("Percentual de reajuste:"));
+var novoSalario = salario + salario * percentual / 100;
+console.log("Novo salário: R$ " + novoSalario);

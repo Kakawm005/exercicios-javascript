@@ -1,11 +1,6 @@
-/**
- * Manzano - L01_COMPL_B: Novo salário com percentual de reajuste
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01_COMPL_B: Novo salário com percentual de reajuste
 
-executar(async () => {
-  const sm = await lerNumero('Salário mensal (SM):');
-  const pr = await lerNumero('Percentual de reajuste (PR %):');
-  const ns = sm + (sm * pr) / 100;
-  escrever(`Novo salário (NS): R$ ${ns.toFixed(2)}`);
-});
+var sm = Number(prompt("Salário mensal (SM):"));
+var pr = Number(prompt("Percentual de reajuste (PR):"));
+var ns = sm + sm * pr / 100;
+console.log("Novo salário (NS): R$ " + ns);

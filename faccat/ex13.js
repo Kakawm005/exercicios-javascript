@@ -1,12 +1,7 @@
-/**
- * Faccat - Exercício 13: Média ponderada (pesos 2, 3 e 5)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 13: Média ponderada (pesos 2, 3 e 5)
 
-executar(async () => {
-  const n1 = await lerNumero('Nota 1:');
-  const n2 = await lerNumero('Nota 2:');
-  const n3 = await lerNumero('Nota 3:');
-  const media = (n1 * 2 + n2 * 3 + n3 * 5) / (2 + 3 + 5);
-  escrever(`Média final: ${media.toFixed(2)}`);
-});
+var n1 = Number(prompt("Nota 1:"));
+var n2 = Number(prompt("Nota 2:"));
+var n3 = Number(prompt("Nota 3:"));
+var media = (n1 * 2 + n2 * 3 + n3 * 5) / 10;
+console.log("Média final: " + media);

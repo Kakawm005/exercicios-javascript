@@ -1,16 +1,19 @@
-/**
- * Manzano - L02H: Maior e menor de cinco valores
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L02H: Maior e menor de cinco valores
 
-executar(async () => {
-  let maior;
-  let menor;
-  for (let i = 1; i <= 5; i++) {
-    const n = await lerNumero(`Número ${i}:`);
-    if (i === 1 || n > maior) maior = n;
-    if (i === 1 || n < menor) menor = n;
+var maior = 0;
+var menor = 0;
+for (var i = 1; i <= 5; i++) {
+  var n = Number(prompt("Digite o número " + i + ":"));
+  if (i == 1) {
+    maior = n;
+    menor = n;
   }
-  escrever(`Maior: ${maior}`);
-  escrever(`Menor: ${menor}`);
-});
+  if (n > maior) {
+    maior = n;
+  }
+  if (n < menor) {
+    menor = n;
+  }
+}
+console.log("Maior: " + maior);
+console.log("Menor: " + menor);

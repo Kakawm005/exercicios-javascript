@@ -1,9 +1,8 @@
-/**
- * Manzano - L02J: Valor na faixa de 1 a 9
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L02J: Valor na faixa de 1 a 9
 
-executar(async () => {
-  const n = await lerNumero('Digite um valor de 1 a 9:');
-  escrever(n >= 1 && n <= 9 ? 'O valor está na faixa permitida' : 'O valor está fora da faixa permitida');
-});
+var n = Number(prompt("Digite um valor de 1 a 9:"));
+if (n >= 1 && n <= 9) {
+  console.log("O valor está na faixa permitida");
+} else {
+  console.log("O valor está fora da faixa permitida");
+}

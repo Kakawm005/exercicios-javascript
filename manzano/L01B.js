@@ -1,10 +1,5 @@
-/**
- * Manzano - L01B: Fahrenheit para Celsius
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L01B: Fahrenheit para Celsius
 
-executar(async () => {
-  const f = await lerNumero('Temperatura em graus Fahrenheit:');
-  const c = (f - 32) * (5 / 9);
-  escrever(`${f} °F = ${c.toFixed(2)} °C`);
-});
+var f = Number(prompt("Temperatura em graus Fahrenheit:"));
+var c = (f - 32) * (5 / 9);
+console.log(f + " graus F = " + c + " graus C");

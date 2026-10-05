@@ -1,20 +1,16 @@
-/**
- * Manzano - L04J: Divisão inteira por subtrações sucessivas (repita, sem DIV)
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Manzano - L04J: Divisão inteira por subtrações sucessivas (sem usar DIV)
 
-executar(async () => {
-  const dividendo = await lerNumero('Dividendo (inteiro >= 0):');
-  const divisor = await lerNumero('Divisor (inteiro > 0):');
-  if (divisor <= 0 || dividendo < 0) {
-    escrever('Use dividendo >= 0 e divisor > 0.');
-    return;
-  }
-  let resto = dividendo;
-  let quociente = 0;
+var dividendo = Number(prompt("Digite o dividendo:"));
+var divisor = Number(prompt("Digite o divisor (maior que zero):"));
+if (divisor > 0 && dividendo >= 0) {
+  var resto = dividendo;
+  var quociente = 0;
   while (resto >= divisor) {
-    resto -= divisor;
-    quociente++;
+    resto = resto - divisor;
+    quociente = quociente + 1;
   }
-  escrever(`Quociente: ${quociente} (resto: ${resto})`);
-});
+  console.log("Quociente: " + quociente);
+  console.log("Resto: " + resto);
+} else {
+  console.log("Use dividendo maior ou igual a 0 e divisor maior que 0");
+}

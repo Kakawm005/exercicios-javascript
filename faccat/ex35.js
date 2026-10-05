@@ -1,26 +1,33 @@
-/**
- * Faccat - Exercício 35: Posto de combustível: valor a pagar com desconto por quantidade
- */
-const { lerNumero, lerTexto, escrever, executar } = require('../util');
+// Faccat - Exercício 35: Posto de combustível: valor a pagar com desconto por quantidade
 
-executar(async () => {
-  // Preços/descontos adotados (não constam no PDF):
-  //   Álcool: R$ 1,90/L - até 20 L: 3% | acima de 20 L: 5%
-  //   Gasolina: R$ 2,50/L - até 20 L: 4% | acima de 20 L: 6%
-  const tipo = (await lerTexto('Combustível (A = álcool, G = gasolina):')).toUpperCase();
-  const litros = await lerNumero('Quantidade de litros:');
-  let preco;
-  let desconto;
-  if (tipo === 'A') {
-    preco = 1.9;
-    desconto = litros <= 20 ? 0.03 : 0.05;
-  } else if (tipo === 'G') {
-    preco = 2.5;
-    desconto = litros <= 20 ? 0.04 : 0.06;
+// preços e descontos que usei (não estão no PDF):
+// Álcool: R$ 1,90 o litro - até 20 litros 3% de desconto, acima de 20 litros 5%
+// Gasolina: R$ 2,50 o litro - até 20 litros 4% de desconto, acima de 20 litros 6%
+var tipo = prompt("Combustível (A = álcool, G = gasolina):");
+var litros = Number(prompt("Quantidade de litros:"));
+var preco = 0;
+var desconto = 0;
+
+if (tipo == "A" || tipo == "a") {
+  preco = 1.90;
+  if (litros <= 20) {
+    desconto = 3;
   } else {
-    escrever('Tipo de combustível inválido.');
-    return;
+    desconto = 5;
   }
-  const aPagar = litros * preco * (1 - desconto);
-  escrever(`Valor a pagar: R$ ${aPagar.toFixed(2)}`);
-});
+} else if (tipo == "G" || tipo == "g") {
+  preco = 2.50;
+  if (litros <= 20) {
+    desconto = 4;
+  } else {
+    desconto = 6;
+  }
+}
+
+if (preco == 0) {
+  console.log("Tipo de combustível inválido");
+} else {
+  var total = litros * preco;
+  var valorPagar = total - total * desconto / 100;
+  console.log("Valor a pagar: R$ " + valorPagar);
+}

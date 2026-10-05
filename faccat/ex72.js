@@ -1,17 +1,14 @@
-/**
- * Faccat - Exercício 72: Maior preço e média de preços de 15 produtos
- */
-const { lerNumero, lerTexto, escrever, executar } = require('../util');
+// Faccat - Exercício 72: Maior preço e média de preços de 15 produtos
 
-executar(async () => {
-  let soma = 0;
-  let maior = -Infinity;
-  for (let i = 1; i <= 15; i++) {
-    const codigo = await lerTexto(`Código do produto ${i}:`);
-    const preco = await lerNumero(`Preço do produto ${codigo}:`);
-    soma += preco;
-    if (preco > maior) maior = preco;
+var soma = 0;
+var maior = 0;
+for (var i = 1; i <= 15; i++) {
+  var codigo = prompt("Código do produto " + i + ":");
+  var preco = Number(prompt("Preço do produto " + codigo + ":"));
+  soma = soma + preco;
+  if (i == 1 || preco > maior) {
+    maior = preco;
   }
-  escrever(`Maior preço: R$ ${maior.toFixed(2)}`);
-  escrever(`Média dos preços: R$ ${(soma / 15).toFixed(2)}`);
-});
+}
+console.log("Maior preço: R$ " + maior);
+console.log("Média dos preços: R$ " + soma / 15);

@@ -1,11 +1,7 @@
-/**
- * Faccat - Exercício 7: Idade em anos, meses e dias convertida para dias
- */
-const { lerNumero, escrever, executar } = require('../util');
+// Faccat - Exercício 7: Idade em anos, meses e dias convertida para dias
 
-executar(async () => {
-  const anos = await lerNumero('Anos:');
-  const meses = await lerNumero('Meses:');
-  const dias = await lerNumero('Dias:');
-  escrever(`Idade em dias: ${anos * 365 + meses * 30 + dias}`);
-});
+var anos = Number(prompt("Anos:"));
+var meses = Number(prompt("Meses:"));
+var dias = Number(prompt("Dias:"));
+var total = anos * 365 + meses * 30 + dias;
+console.log("Idade em dias: " + total);

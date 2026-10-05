@@ -1,13 +1,13 @@
-/**
- * Faccat - Exercício 25: Saldo atual de conta bancária
- */
-const { lerNumero, lerTexto, escrever, executar } = require('../util');
+// Faccat - Exercício 25: Saldo atual de conta bancária
 
-executar(async () => {
-  const conta = await lerTexto('Número da conta:');
-  const saldo = await lerNumero('Saldo:');
-  const debito = await lerNumero('Débito:');
-  const credito = await lerNumero('Crédito:');
-  const atual = saldo - debito + credito;
-  escrever(`Conta ${conta} - saldo atual: R$ ${atual.toFixed(2)} (${atual >= 0 ? 'POSITIVO' : 'NEGATIVO'})`);
-});
+var conta = prompt("Número da conta:");
+var saldo = Number(prompt("Saldo:"));
+var debito = Number(prompt("Débito:"));
+var credito = Number(prompt("Crédito:"));
+var saldoAtual = saldo - debito + credito;
+console.log("Conta " + conta + " - saldo atual: R$ " + saldoAtual);
+if (saldoAtual >= 0) {
+  console.log("Saldo POSITIVO");
+} else {
+  console.log("Saldo NEGATIVO");
+}
